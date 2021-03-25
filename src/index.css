@@ -4,11 +4,36 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  padding-right: 15px;
+ padding-left: 15px;
+ padding-top: 10px;
 }
-
+:root {
+  --primary: white;
+}
 body {
   font-family: 'Poppins', sans-serif;
  
+}
+.btnNav {
+  padding: 8px 20px;
+  border-radius: 4px;
+  outline: none;
+  border: none;
+  font-size: 18px;
+  color: pink;
+  cursor: pointer;
+  background-color: var(--primary);
+}
+
+.btnNav:hover {
+  padding: 6px 18px;
+  transition: all 0.3s ease-out;
+  background-color:white;
+  color: hotpink;
+  border-radius: 4px;
+  border: 2px solid var(--primary);
+  transition: all 0.3s ease-out;
 }
 
 .inspo{
@@ -40,6 +65,19 @@ body {
   color:pink;
   font-family: 'Poppins', sans-serif;
 }
+
+.nav-menu {
+  display: grid;
+  grid-template-columns: repeat(5, auto);
+  grid-gap: 10px;
+  list-style: none;
+  text-align: center;
+  width: 70vw;
+  justify-content: end;
+  margin-right: 2rem;
+}
+
+
 .active {
   margin: 8px;
 
@@ -137,6 +175,10 @@ h1 {
   flex: 2;
   height: 20px;
 }
+
+
+
+
 
 footer {
   margin-top: 30px;

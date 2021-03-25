@@ -7,11 +7,14 @@ import AddTask from "./components/AddTask";
 import Account from "./components/Account";
 import Inspire from "./components/Inspire"
 import PictureBank from "./components/PictureBank";
+import NavBar from "./components/NavBar";
+import Navbar from "./navbar-components/Navbar"
+import Home from "./components/Home"
 
 import { BrowserRouter as Router, Route, Switch, Link, useRouteMatch } from "react-router-dom";
 
 
-function App({userData}) {
+function App(props) {
 
 	 
 // HARD CODDED ARRAY DATA 
@@ -134,50 +137,32 @@ function App({userData}) {
    
   // }
   return (
-    
-    <div className="container">
-      <Router>
-        <nav>
-         
-          <Link to="/">Wish Account</Link>
-          <Link to="/picbank">Picture Bank</Link>
-            <Link to="/inspire">Fashion Finds</Link>
-      </nav>
-        <Switch>
-       
+    // <div className="container">
+    <Router>
+      <Navbar />
 
-          <Route exact path="/">
-            <Account/>
-          </Route>
+      {/* <Router>
+  
+        <Route exact path="/home" />
+        <Route exact path="/account" component={Account} />
+        <Route exact path="/profile" component={Inspire} />
 
-          
-          <Route path="/picbank">
-            <PictureBank/>
-          </Route>
+        <Route exact path="/search" />
 
-            
-          <Route path="/inspire">
-            <Inspire userData={userData}
-            />
-          </Route>
+        <Route exact path="/list" />
+      </Router> */}
+      {/* <Route exact path="/about" component={MediaCard} /> */}
 
-        </Switch>
+      <Header saveLastbtn={lastTaskAdd} />
+      <AddTask onAdd={addTask} />
 
-      </Router>
-
-
-
-        <Header title="The Fashion Wish List" saveLastbtn={lastTaskAdd}/>
-        <AddTask onAdd={addTask} />
-       
-        {tasks.length > 0 ? (
-          <Tasks tasks={tasks} onDelete={deleteBtn} onToggle={toggleRemind}  />
-        ) : (
-            "No Designers Left"
-          )}
-      
-      </div>
-    );
+      {tasks.length > 0 ? (
+        <Tasks tasks={tasks} onDelete={deleteBtn} onToggle={toggleRemind} />
+      ) : (
+        "No Designers Left"
+      )}
+    </Router>
+  );
   }
 
 export default App;
