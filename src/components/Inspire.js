@@ -1,4 +1,4 @@
-import "../index.css";
+import "../index.css"
 import { useState } from "react";
 import Button from "./Button";
 
@@ -8,39 +8,46 @@ const Inspire = () => {
   const [designerList, setDesignerList] = useState([]);
   const [itemsList, setItemsList] = useState([]);
 
-  const handleChange = (event) => {
-    setDesigner(event.target.value);
-  };
+  // const handleChange = (event) => {
+  //   setDesigner(event.target.value);
+  // };
 
-  const handleChange2 = (event) => {
-    setItems(event.target.value);
-  };
-  const handleListChange = (event) => {
-    event.preventDefault();
-      setDesignerList([...designerList, designer]);
+  // const handleChange2 = (event) => {
+  //   setItems(event.target.value);
+  // };
+  // const handleListChange = (event) => {
+  //   event.preventDefault();
+  //     setDesignerList([...designerList, designer]);
 
-      setItemsList([...itemsList, items]);
+  //     setItemsList([...itemsList, items]);
      
-  };
+  // };
 
-  console.log("list", designerList);
-  console.log("items", itemsList);
-  console.log("click", handleListChange);
+  // console.log("list", designerList);
+  // console.log("items", itemsList);
+  // console.log("click", handleListChange);
 
   return (
-    <div className="form-control inspo">
-      <ul>
+     <form className="add-form">
+      <div className="form-control">
+         <label>Inspiration</label>
+      <input
+          type="text"
+          placeholder="Inspo"
+          // value={}
+          // onChange={}
+        />
+      </div>
+         <div className="form-control">
+        <label>Designer </label>
         <input
           type="text"
-          onChange={handleChange}
-          placeholder="Search Designer"
+          placeholder="Current designer"
+          // value={}
+          // onChange={}
         />
-      </ul>
-      <input
-        type="text"
-        onChange={handleChange2}
-        placeholder="Search Wish Item"
-      />
+      </div>
+{/*  
       <Button onClick={handleListChange} />
 
   {designerList.map((designers) => (
@@ -50,11 +57,14 @@ const Inspire = () => {
           {itemsList.map((index) => ( 
     
         <h4> Wish Item: {index} </h4>
-      ))}
+      ))} */}
            
-    </div>
+
+        </form>
   );
 };
 
 export default Inspire;
 
+
+    

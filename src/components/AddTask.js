@@ -19,19 +19,19 @@ const AddTask = ({ onAdd }) => {
   return (
     <form className="add-form" onSubmit={onSubmit}>
       <div className="form-control">
-        <label>Add Designer Wish Item</label>
+        <label>Add Designer</label>
         <input
           type="text"
-          placeholder="Add Wish"
+          placeholder="Add Designer"
           value={Name}
           onChange={(e) => setName(e.target.value)}
         />
       </div>
       <div className="form-control">
-        <label>Add Designer Wish Price</label>
+        <label>Add Designer Wish Item</label>
         <input
           type="text"
-          placeholder="Current Item Price"
+          placeholder="Current Wish Item"
           value={FamousFor}
           onChange={(e) => setFamousFor(e.target.value)}
         />
@@ -52,14 +52,14 @@ const AddTask = ({ onAdd }) => {
       </div> */}
       <div className="form-control form-control-check">
         <label>Set Reminder to Purchase</label>
-        <input
+        <input 
           type="checkbox"
           checked={owns}
           value={owns}
           onChange={(e) => setOwns(e.currentTarget.checked)}
         />
       </div>
-      <input type="submit" value="Save Designer" className="btn btn-block" />
+      <input type="submit" value="Save Designer Wish List Item" className="btn btn-block" />
     </form>
   );
 };

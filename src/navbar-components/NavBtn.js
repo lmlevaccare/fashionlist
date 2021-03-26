@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 
 export function NavBtn() {
     return (
-        <Link to='account'>
+        <Link to='/signup'>
             
             <button className="btnNav">Sign.Up</button>
       </Link>

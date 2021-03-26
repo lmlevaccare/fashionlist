@@ -2,10 +2,9 @@ import React from 'react'
 
 const Home = () => {
     return (
-        <div>
-            hello
-        </div>
-    )
+      <>
+        <h1 className="profile">Home</h1>
+      </>
+    );
 }
-
 export default Home

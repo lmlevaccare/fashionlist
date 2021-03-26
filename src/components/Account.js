@@ -4,10 +4,10 @@ import "../index.css";
 
 const Account = () => {
     return (
-        <div>
-            User Account
-        </div>
-    )
+      <>
+        <h1 className="account">User.Account</h1>
+      </>
+    );
 }
 
 export default Account

@@ -10,8 +10,15 @@ const Header = (props) => {
 
   return (
     <header className="header">
+      <h1>Designer.Wish.List</h1>
       <h1 style={{ color: "pink" }}>{props.title}</h1>
-      <Button color="pink" Name="Add" onClick={onClick}/>
+      <h1>
+        <Button
+          color="pink"
+          Name="Deleted Saved Designer Item? Click Here to Re-Add Deleted Item back to Wish List"
+          onClick={onClick}
+        />
+      </h1>
     </header>
   );
 };

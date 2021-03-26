@@ -1,15 +1,14 @@
-
-
 export const MenuItems = [
   {
-    title: "Rewards",
-    path: "/reward",
+    title: "Fashion.Inspo",
+    path: "/inspo",
     cName: "dropdown-link",
   },
   {
-    title: "inspiration",
-    path: "/inspire",
+    title: "Fashion.Rewards",
+    path: "/rewards",
     cName: "dropdown-link",
   },
-];
 
+];
+export default MenuItems

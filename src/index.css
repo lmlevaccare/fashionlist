@@ -2,11 +2,11 @@
 
 * {
   box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  padding-right: 15px;
- padding-left: 15px;
- padding-top: 10px;
+  /* margin: 0;
+  padding: 0; */
+  padding-right: 5px;
+ padding-left: 5px;
+ padding-top: 5px;
 }
 :root {
   --primary: white;
@@ -52,13 +52,12 @@ body {
   border-radius: 5px;
   
 }
-
-.header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 20px;
-}
+ .header {
+  /* display: flex; */
+  /* justify-content: space-between; */
+   float: center;
+  
+} 
  nav a {
   padding: 8px;
   text-decoration: none;
@@ -93,7 +92,7 @@ body {
   font-family: 'Poppins', sans-serif;
 }
   
-.btn {
+.btn{
   display: inline-block;
   background: #000;
   color: #fff;
@@ -103,7 +102,7 @@ body {
   border-radius: 5px;
   cursor: pointer;
   text-decoration: none;
-  font-size: 15px;
+  font-size: 20px;
   font-family: inherit;
 }
 
@@ -119,6 +118,7 @@ body {
   display: block;
   width: 100%;
   color:pink;
+ 
 }
 
 .task {
@@ -178,6 +178,13 @@ h1 {
 
 
 
+.profile, .rewards, .account, .wishes, .form-control{
+  display: flex;
+  align-items: center;
+  height: 20vh;
+  justify-content: center;
+  font-size: 2rem;
+}
 
 
 footer {

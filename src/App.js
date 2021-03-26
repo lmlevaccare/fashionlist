@@ -1,15 +1,20 @@
 import "./App.css";
+import Account from "./components/Account";
+import Inspire from "./components/Inspire"
+// import PictureBank from "./components/PictureBank";
+// import NavBar from "./components/NavBar";
+// import Home from "./components/Home"
 
 import Header from "./components/Header";
 import Tasks from "./components/Tasks";
 import { useState,useEffect } from "react";
 import AddTask from "./components/AddTask";
-import Account from "./components/Account";
-import Inspire from "./components/Inspire"
-import PictureBank from "./components/PictureBank";
-import NavBar from "./components/NavBar";
 import Navbar from "./navbar-components/Navbar"
-import Home from "./components/Home"
+import Profile from "./page-components/Profile"
+// import Wishes from "./page-components/Wishes"
+import Signup from "./page-components/Signup"
+import Rewards from "./page-components/Rewards"
+import Home from "./page-components/Home"
 
 import { BrowserRouter as Router, Route, Switch, Link, useRouteMatch } from "react-router-dom";
 
@@ -129,32 +134,25 @@ function App(props) {
     )
   }
 
-  // search designer API KEY
-  // const addedWish = () => {
-  //   setUsers(users.map((user => user.email)
-     
-  //   ))
-   
-  // }
   return (
     // <div className="container">
     <Router>
       <Navbar />
+      <Switch>
+        <Route path="/profile" exact component={Profile} />
+        <Route path="/" exact component={Home} />
+        <Route path="/account" exact component={Account} />
+        <Route path="/rewards" exact component={Rewards} />
+        <Route path="/inspo" exact component={Inspire} />
+        <Route path="/signup" exact component={Signup} />
 
-      {/* <Router>
-  
-        <Route exact path="/home" />
-        <Route exact path="/account" component={Account} />
-        <Route exact path="/profile" component={Inspire} />
+        <Route path="/task" render={() => <AddTask onAdd={addTask} />} />
+      </Switch>
 
-        <Route exact path="/search" />
-
-        <Route exact path="/list" />
-      </Router> */}
-      {/* <Route exact path="/about" component={MediaCard} /> */}
-
-      <Header saveLastbtn={lastTaskAdd} />
-      <AddTask onAdd={addTask} />
+      <Header saveLastbtn={lastTaskAdd}>
+   
+      </Header>
+      {/* <AddTask onAdd={addTask} /> */}
 
       {tasks.length > 0 ? (
         <Tasks tasks={tasks} onDelete={deleteBtn} onToggle={toggleRemind} />
